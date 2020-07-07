@@ -57,6 +57,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
         userloggedinTextView = findViewById(R.id.textViewUserLoggedin);
         loadingProgressBar = findViewById(R.id.progressBar);
         loadingProgressBar.setVisibility(View.GONE);
