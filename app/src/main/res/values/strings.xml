@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">App Điểm Danh</string>
+    <string name="server_client_id">41078458126-pip0m5hh6o0j2gpv419ocqrc8ncj51vb.apps.googleusercontent.com</string>
+    <string-array name="role_array">
+        <item>Sinh viên</item>
+        <item>Giảng viên</item>
+    </string-array>
+    <string-array name="day_array">
+        <item>Thứ Hai</item>
+        <item>Thứ Ba</item>
+        <item>Thứ Tư</item>
+        <item>Thứ Năm</item>
+        <item>Thứ Sáu</item>
+        <item>Thứ Bảy</item>
+        <item>Chủ Nhật</item>
+    </string-array>
+</resources>
