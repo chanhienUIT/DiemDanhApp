@@ -1,6 +1,7 @@
 # DiemDanhApp
 Ứng dụng điểm danh Android.
 ## Cài đặt
+## Nếu ứng dụng không thể đăng nhập thì hãy cài đặt ```app-debug.apk``` trực tiếp.
 ### Yêu cầu phần mềm
 * Android Studio phiên bản 4.0 trở đi.
 * Thiết bị Android có phiên bản SDK 26 hoặc mới hơn.
