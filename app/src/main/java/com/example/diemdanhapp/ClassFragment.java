@@ -135,7 +135,6 @@ public class ClassFragment extends Fragment {
                 os.close();
 
                 connection.connect();
-                connection.connect();
                 if (connection.getResponseCode() == HttpURLConnection.HTTP_OK) {
                     connection.disconnect();
                     Snackbar snackbar = Snackbar.make(Objects.requireNonNull(getActivity()).findViewById(android.R.id.content),"Đăng ký lớp thành công", Snackbar.LENGTH_SHORT);
@@ -170,7 +169,6 @@ public class ClassFragment extends Fragment {
             loadingProgressBar.setVisibility(View.GONE);
             super.onPostExecute(result);
             refreshAllClassData();
-
         }
     }
 
@@ -196,16 +194,15 @@ public class ClassFragment extends Fragment {
 
             connection.connect();
             if (connection.getResponseCode() == HttpURLConnection.HTTP_OK) {
-                connection.disconnect();
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
                 String responseLine;
                 StringBuffer response = new StringBuffer();
                 while ((responseLine = bufferedReader.readLine()) != null) {
                     response.append(responseLine);
                 }
-                bufferedReader.close();
                 jsonResponse = new JSONArray(response.toString());
-
+                bufferedReader.close();
+                connection.disconnect();
             } else if (connection.getResponseCode() == HttpURLConnection.HTTP_UNAUTHORIZED) {
                 connection.disconnect();
                 Snackbar snackbar = Snackbar.make(Objects.requireNonNull(getActivity()).findViewById(android.R.id.content),"Phiên hoạt động kết thúc, vui lòng đăng nhập lại", Snackbar.LENGTH_SHORT);
